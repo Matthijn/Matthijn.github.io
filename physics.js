@@ -137,7 +137,7 @@ function applyAttraction(attractor, bodies) {
     const edge = 20
 
     const mouseInWindow = mpx > edge && mpy > edge && mpx + edge < window.innerWidth && mpy + edge < window.innerHeight
-    console.log(mpx)
+
     if (mouseInWindow) {
         Body.translate(attractor, {
             x: (mpx - attractor.position.x) * mouseSpeed,
