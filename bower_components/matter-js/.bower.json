@@ -1,0 +1,14 @@
+{
+  "name": "matter-js",
+  "homepage": "https://github.com/liabru/matter-js",
+  "version": "0.18.0",
+  "_release": "0.18.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.18.0",
+    "commit": "a8cced2975f0bf82fb709e432e01ddf4881a878a"
+  },
+  "_source": "https://github.com/liabru/matter-js.git",
+  "_target": "^0.18.0",
+  "_originalSource": "matter-js"
+}
