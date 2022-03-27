@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "authors": [
+    "Matthijn Dijkstra <matthijndijkstra@gmail.com>"
+  ],
+  "description": "My portfolio",
+  "main": "index.html",
+  "keywords": [
+    "portfolio"
+  ],
+  "license": "GPLv3",
+  "homepage": "/",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fullpage.js": "^3.1.2",
+    "pure": "^1.0.1",
+    "matter-js": "^0.18.0",
+    "animejs": "^3.2.1"
+  }
+}
