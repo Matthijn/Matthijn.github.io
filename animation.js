@@ -19,13 +19,32 @@ function setupDevTextAnimation() {
             targets: '.ml11 .line',
             translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
             easing: "easeOutExpo",
-            duration: 700
+            duration: 2100,
+            delay: 0
         }).add({
         targets: '.ml11 .letter',
         opacity: [0,1],
         easing: "easeOutExpo",
         duration: 600,
-        offset: '-=775',
-        delay: anime.stagger(30)
-    })
+        offset: '-=2000',
+        delay: (el, i) => 34 * (i+1)
+    });
+
+    setTimeout(() => {
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.ml11 .line',
+                opacity: 0,
+                duration: 0,
+                easing: "easeOutExpo",
+                delay: 500
+            })
+            .add({
+                targets: '.ml11 .line',
+                opacity: 1,
+                duration: 0,
+                easing: "easeOutExpo",
+                delay: 500
+            })
+    }, 2500)
 }

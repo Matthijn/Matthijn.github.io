@@ -19,7 +19,7 @@
     "Julian Garnier <hello@julian.gr>"
   ],
   "license": "MIT",
-  "homepage": "https://animejs.com/",
+  "homepage": "http://animejs.com/",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -27,14 +27,14 @@
     "test",
     "tests"
   ],
-  "version": "3.2.1",
-  "_release": "3.2.1",
+  "version": "2.2.0",
+  "_release": "2.2.0",
   "_resolution": {
     "type": "version",
-    "tag": "v3.2.1",
-    "commit": "0a1234bf30c32cdfdd434ddae122e55c696c3070"
+    "tag": "v2.2.0",
+    "commit": "ae9eb90ab66e92f89dad8f9b59e9df3928c16991"
   },
   "_source": "https://github.com/juliangarnier/anime.git",
-  "_target": "^3.2.1",
+  "_target": "^2",
   "_originalSource": "animejs"
 }
