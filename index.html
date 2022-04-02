@@ -15,6 +15,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+    <link rel="stylesheet" href="/bower_components/flickity/dist/flickity.min.css">
     <link rel="stylesheet" href="/stylesheet.css?v=1.0">
 
     <base href="/" >
@@ -55,55 +56,84 @@
 
     <div id="content">
 
-        <div class="with-background">
-            <article class="section">
+        <div class="with-background articles">
 
-                <div class="box-small emphasis-box left">
-                    <header>
-                        <a href="https://peerwell.co" target="_blank"><img class="logo" src="/assets/peerwell.png" alt="PeerWell" /></a>
-                        <h2>Head Developer</h2>
-                    </header>
+            <a class="scene" href="https://peerwell.co" target="_blank">
+                <article class="article-box card">
+                    <ul>
+                        <li class="front">
+                            <header>
+                                <img class="logo" src="/assets/peerwell.png" alt="PeerWell" />
+                                <h2>Head Developer</h2>
+                            </header>
 
-                    <p>
-                        PeerWell consists of a suite of applications which are designed to help patients in their journey from, to and after surgery. <br /> <br />
-                        Patients can do daily tasks, ranging from informational content, exercises guided by smart features of the smartphone like the accelerometer and medically approved surveys. <br /> <br />
-                        Doctors and nurses can track the patients progress through a portal.
-                    </p>
-
-                </div>
-
-                <div class="right">
-                    <ul class="peerwell-images">
-                        <li class="peerwell-app"><img src="/assets/peerwell1.png" alt="PeerWell Dashboard" /></li>
-                        <li class="peerwell-dashboard"><img src="/assets/peerwell2.png" alt="PeerWell Mobile" /></li>
+                            <p>
+                                PeerWell consists of a suite of applications which are designed to help patients in their journey to and after surgery. <br /> <br />
+                                Patients can do daily tasks, ranging from informational content, exercises guided by smart features of the smartphone like the accelerometer and medically approved surveys. <br /> <br />
+                                Doctors and nurses can track the patients progress through a portal.
+                            </p>
+                        </li>
+                        <li class="back peerwell-back"></li>
                     </ul>
-                </div>
-            </article>
-
-
-            <div class="section">
-
-                <article>
-
-                    <div class="left">
-                        <iframe src="https://player.vimeo.com/video/154775729?h=44f734d527" width="640" height="360" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-
-                    <div class="right emphasis-box box-small">
-                        <header>
-                            <img class="logo" src="/assets/mini.svg" alt="Mini" />
-                            <h2>Mobile&nbsp;/&nbsp;VR Developer</h2>
-                        </header>
-
-                        <p>
-                            Walk through a virtual version of a real museum and sit all kinds of Mini Coopers and look around. <br /><br />
-                            Unfortunately the app is no longer available. More details can be found <a href="https://feitsmavisuals.com/the-mini-story-1">here</a>.
-                        </p>
-                    </div>
-
                 </article>
+            </a>
 
-            </div>
+            <a class="scene" href="https://feitsmavisuals.com/the-mini-story-1" target="_blank">
+                <article class="article-box card" id="mini">
+                    <ul>
+                        <li class="front">
+                            <header>
+                                <img class="logo mini-logo" src="/assets/mini.png" alt="Mini" />
+                                <h2>Mobile&nbsp;/&nbsp;VR Developer</h2>
+                            </header>
+
+                            <p>
+                                Walk through a virtual version of a real museum and sit all kinds of Mini Coopers and look around. <br /><br />
+                                The app was made in conjunction with yellowBird for both iPhone and iPad devices with a tailored UI for both. <br /><br />
+                                Unfortunately the app is no longer available.
+                            </p>
+                        </li>
+                        <li class="back mini-back"></li>
+                    </ul>
+                </article>
+            </a>
+
+            <a class="scene" target="_blank" href="https://www.managedwphosting.nl">
+                <article class="article-box card" id="managedwp">
+                    <ul>
+                        <li class="front">
+                            <header>
+                                <img class="logo managedwp-logo" src="/assets/managedwphosting.png" alt="Managed Wordpress Hosting" />
+                                <h2>Wordpress Developer</h2>
+
+                                <p>For Managed WordPress hosting, one of the more well known Wordpress specialists in The Netherlands, I've converted numerous website designs into Wordpress templates, including their own website.</p>
+                            </header>
+                        </li>
+                        <li class="back back-managedwp"></li>
+                    </ul>
+                </article>
+            </a>
+
+            <a class="scene" href="https://web.archive.org/web/20200806160128/https://eten.nl/" target="_blank">
+                <article class="article-box card" id="eet">
+                    <ul>
+                        <li class="front">
+                            <header>
+                                <img class="logo eet-logo" src="/assets/eten.png" alt="Eet" />
+                                <h2>Full Stack Developer</h2>
+                            </header>
+
+                            <p>
+                                Eten.nl was a full service food delivery website. It included payment handling, PDF invoice generation, point of sale ticket printing and much more. <br /> <br />
+                                When people ordered they were updated of the status through sms and or e-mail messages. <br /> <br />
+                                Also an API was created so in some future a mobile app could be created to communicate with the existing systems.
+                            </p>
+                        </li>
+                        <li class="back eten-back"></li>
+                    </ul>
+                </article>
+            </a>
+
         </div>
 
         <div class="padding-box"></div>
@@ -135,5 +165,6 @@
 
 <script src="/bower_components/matter-js/build/matter.min.js"></script>
 <script src="/bower_components/animejs/anime.min.js"></script>
+<script src="/bower_components/flickity/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>

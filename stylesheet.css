@@ -26,9 +26,18 @@ body {
     background: #202020;
 }
 
-.pure-u-1-1, .pure-u-1-2, .pure-u-1-3 {
-    box-sizing: border-box;
-    padding: 2em;
+body a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+body a:hover {
+    color: #ff624d;
+    text-decoration: none;
+}
+
+.front, .back {
+    list-style: none;
 }
 
 .physics-container {
@@ -57,7 +66,10 @@ body {
     color: #929292;
     z-index: 2;
     overflow: auto;
-    padding: 0;
+    /*padding: 0;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
 }
 
 .with-background {
@@ -66,6 +78,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     margin: 0;
+    overflow: auto;
 }
 
 .padding-box {
@@ -77,30 +90,27 @@ body {
     color: #ff624d
 }
 
+article ul {
+    margin: 0 !important;
+}
+
 .section {
     padding: 2em;
     overflow: auto;
     clear: both;
 }
 
-.box-small {
-    width: 30%;
-    margin: 2em;
-    padding: 2em;
+.articles {
+    display: inline-grid;
+    grid-template-columns: 370px 370px 370px;
+    grid-template-rows: 600px 600px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    padding: 3em;
 }
 
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-.emphasis-box {
-    background: rgba(255,255,255,0.1);
-    border-radius: 20px;
-    color: white;
+.article-box {
+    box-sizing: border-box;
 }
 
 .box-right {
@@ -246,10 +256,17 @@ body {
 }
 
 .logo {
-    background: white;
-    border-radius: 20px;
-    padding: 30px;
     width: 200px;
+    margin: 0 auto;
+}
+
+.mini-logo {
+    padding: 7px 30px !important;
+}
+
+.managedwp-logo {
+    width: 90px !important;
+    padding: 7px 80px !important;
 }
 
 .code {
@@ -263,6 +280,7 @@ body {
     right: 0;
     height: 230px;
     z-index: 1;
+    opacity: .5;
 }
 
 .code:hover {
@@ -303,3 +321,83 @@ body {
     line-height: 1em;
 }
 /* /animation */
+
+.flickity-prev-next-button.next {
+    right: -25px;
+}
+
+.flickity-prev-next-button.previous {
+    left: -25px;
+}
+
+.scene {
+    perspective: 600px;
+    display: block;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.scene:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card ul {
+    margin: 0;
+    padding: 0;
+}
+
+.card .front, .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 2em 3em;
+}
+
+.card .front {
+    background: white;
+    color: #5c6370;
+    border-radius: 20px;
+}
+
+.card .back {
+    border-radius: 20px;
+    transform: rotateY(180deg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.card .peerwell-back {
+    background-image: url("/assets/peerwell-app.png");
+}
+
+.card .mini-back {
+    background-image: url("/assets/mini-story.png");
+}
+
+.card .eten-back {
+    background-image: url("/assets/eten.nl.png");
+}
+
+.card .back-managedwp {
+    background-image: url("/assets/managedwphosting.nl.png");
+}
