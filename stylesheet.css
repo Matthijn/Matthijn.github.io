@@ -101,16 +101,24 @@ article ul {
 }
 
 .articles {
-    display: inline-grid;
-    grid-template-columns: 370px 370px 370px;
-    grid-template-rows: 600px 600px;
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    display: block;
     padding: 3em;
+    padding-right: 0;
+    margin: 0 auto;
+    overflow: auto;
+    width: 1280px;
+    list-style: none;
 }
+
 
 .article-box {
     box-sizing: border-box;
+    width: 360px;
+    height: 600px;
+    margin-right: 50px;
+    float: left;
+    display: block;
+    margin-bottom: 50px;
 }
 
 .box-right {
@@ -261,12 +269,22 @@ article ul {
 }
 
 .mini-logo {
-    padding: 7px 30px !important;
+    padding: 0 !important;
+    width: 200px !important;
+    display: block;
+    margin: 0 auto;
 }
 
 .managedwp-logo {
-    width: 90px !important;
-    padding: 7px 80px !important;
+    width: 70px !important;
+    padding: 0 !important;
+    display: block;
+    margin: 0 auto;
+}
+
+.mgtickets-logo {
+    margin-top: 7px;
+    margin-bottom: 8px;
 }
 
 .code {
@@ -331,13 +349,16 @@ article ul {
 }
 
 .scene {
-    perspective: 600px;
+    perspective: 2000px;
     display: block;
+    width: 360px;
+    height: 600px;
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 50px;
 }
 
 .card {
-    width: 100%;
-    height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
     cursor: pointer;
@@ -366,7 +387,9 @@ article ul {
 }
 
 .card .front {
-    background: white;
+    /*background: white;*/
+    background: rgb(237,237,237);
+    background: linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 100%);
     color: #5c6370;
     border-radius: 20px;
 }
@@ -376,6 +399,7 @@ article ul {
     transform: rotateY(180deg);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 .cover {
@@ -400,4 +424,39 @@ article ul {
 
 .card .back-managedwp {
     background-image: url("/assets/managedwphosting.nl.png");
+}
+
+
+.tech {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255, .9);
+    box-sizing: border-box;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: -5px -5px 15px #c2c2c2;
+    border-top: 1px solid #a3a3a3;
+}
+
+.tech ul {
+    list-style: none;
+    padding: 15px;
+    overflow: auto;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.tech li img {
+    width: 60px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.tech li {
+    width: 60px;
+    display: inline-block;
+    margin: 10px;
+    margin-bottom: 0;
 }
