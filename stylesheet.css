@@ -102,14 +102,13 @@ article ul {
 
 .articles {
     display: block;
-    padding: 3em;
-    padding-right: 0;
+    padding: 3em 0 3em 3em;
     margin: 0 auto;
     overflow: auto;
     width: 1280px;
     list-style: none;
+    overflow-x: hidden;
 }
-
 
 .article-box {
     box-sizing: border-box;
@@ -426,6 +425,9 @@ article ul {
     background-image: url("/assets/managedwphosting.nl.png");
 }
 
+.card .back-mgtickets {
+    background-image: url("/assets/mgtickets-app.png");
+}
 
 .tech {
     position: absolute;
@@ -442,9 +444,8 @@ article ul {
 
 .tech ul {
     list-style: none;
-    padding: 15px;
     overflow: auto;
-    padding-right: 5px;
+    padding: 15px 5px 15px 15px;
     text-align: center;
 }
 
@@ -457,6 +458,17 @@ article ul {
 .tech li {
     width: 60px;
     display: inline-block;
-    margin: 10px;
-    margin-bottom: 0;
+    margin: 10px 10px 0;
+}
+
+@media only screen and (max-width: 1250px) {
+    .articles {
+        width: 900px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .articles {
+        width: 400px;
+    }
 }
