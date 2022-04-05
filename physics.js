@@ -28,12 +28,18 @@ const KnownTech = [
     "css"
 ]
 
-const options = {
-    width: window.innerWidth,
-    height: window.innerHeight
+let options = calculateWindowSize()
+
+function calculateWindowSize() {
+    return {
+        width: window.innerWidth,
+        height: window.innerHeight
+    }
 }
 
 function initPhysics() {
+    options = calculateWindowSize()
+
     const Engine = Matter.Engine,
         Render = Matter.Render,
         Runner = Matter.Runner,
@@ -50,6 +56,7 @@ function initPhysics() {
     });
 
     const root = document.querySelector("#knownTech")
+    root.innerHTML = ""
 
     const render = Render.create({
         element: root,
