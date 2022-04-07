@@ -33,7 +33,8 @@ let options = calculateWindowSize()
 function calculateWindowSize() {
     return {
         width: window.innerWidth,
-        height: window.innerHeight
+        height: window.innerHeight,
+        scale: window.innerWidth <= 428 && 0.5 || 1
     }
 }
 
@@ -90,9 +91,9 @@ function createTechBody(sprite) {
     const Bodies = Matter.Bodies
 
     const
-        width = 100,
-        height = 100,
-        cornerRadius = 40
+        width = 100 * options.scale,
+        height = 100 * options.scale,
+        cornerRadius = 40 * options.scale
 
     const spriteSize = 256
     const spriteScale = width/spriteSize
@@ -112,7 +113,7 @@ function createTechBody(sprite) {
 function createAttractor(render) {
     const Bodies = Matter.Bodies
 
-    const scale = 0.75
+    const scale = 0.75 * options.scale
 
     return Bodies.rectangle(
         render.options.width / 2 + options.width / 4,
@@ -147,14 +148,14 @@ function applyAttraction(attractor, bodies) {
 
     if (mouseInWindow) {
         Body.translate(attractor, {
-            x: (mpx - attractor.position.x) * mouseSpeed,
-            y: (mpy - attractor.position.y) * mouseSpeed
+            x: (mpx - attractor.position.x) * mouseSpeed * options.scale,
+            y: (mpy - attractor.position.y) * mouseSpeed * options.scale
         });
     }
     else {
         Body.translate(attractor, {
-            x: (options.width / 2 + options.width / 4 - attractor.position.x) * 0.025,
-            y: (options.height / 2 + options.height / 4 - attractor.position.y) * 0.025
+            x: ((options.width / 2) + options.width / 4 - attractor.position.x) * 0.025 * options.scale,
+            y: (options.height / 2 + options.height / 4 - attractor.position.y) * 0.025 * options.scale
         });
     }
 
@@ -170,7 +171,7 @@ function applyAttraction(attractor, bodies) {
         const yDirection = by > ay && -attractionGravity || attractionGravity
 
         Body.applyForce(body, body.position, {
-            x: xDirection, y: yDirection
+            x: xDirection * options.scale, y: yDirection * options.scale
         })
     }
 }

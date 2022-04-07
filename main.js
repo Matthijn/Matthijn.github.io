@@ -11,6 +11,8 @@ window.addEventListener('load', (event) => {
     setupAnimation()
 });
 
-window.onresize = debounce(function () {
-    initPhysics()
-})
+if(!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+    window.onresize = debounce(function () {
+        initPhysics()
+    })
+}

@@ -9,6 +9,7 @@ body::-webkit-scrollbar {
 body {
     scrollbar-width: thin;
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    overflow-x: hidden;
 }
 body::-webkit-scrollbar-track {
     background: var(--scrollbarBG);
@@ -66,10 +67,7 @@ body a:hover {
     color: #929292;
     z-index: 2;
     overflow: auto;
-    /*padding: 0;*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
+    overflow-x: hidden;
 }
 
 .with-background {
@@ -79,6 +77,7 @@ body a:hover {
     box-sizing: border-box;
     margin: 0;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .padding-box {
@@ -258,10 +257,6 @@ article ul {
     width: 100%;
 }
 
-[data-job] {
-    display: none;
-}
-
 .logo {
     width: 200px;
     margin: 0 auto;
@@ -401,6 +396,15 @@ article ul {
     overflow: hidden;
 }
 
+.card .back a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+}
+
 .cover {
     position: absolute;
     top: 0;
@@ -440,9 +444,6 @@ article ul {
     border-bottom-right-radius: 15px;
     box-shadow: -5px -5px 15px #c2c2c2;
     border-top: 1px solid #a3a3a3;
-}
-
-.tech ul {
     list-style: none;
     overflow: auto;
     padding: 15px 5px 15px 15px;
@@ -465,10 +466,71 @@ article ul {
     .articles {
         width: 900px;
     }
+
+    .me h1, .me h2, .me .tldr {
+        padding-left: 30px;
+    }
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    #content {
+        right: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    #front {
+        overflow: hidden;
+        width: 100%;
+    }
+
+
+    .with-background {
+        margin: 0;
+        padding: 0;
+        margin-top: 40px;
+    }
+
     .articles {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .article-box {
+        box-sizing: border-box;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .scene {
+        float: none;
+        margin: 0 auto 20px;
         width: 400px;
+    }
+
+    .code, .padding-box, .tldr-inner {
+        display: none;
+    }
+
+    .me h1 {
+        font-size: 3em;
+    }
+
+    .me h2 {
+        font-size: 1.5em;
+    }
+
+    .me .tldr a {
+        display: inline-block;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 400px) {
+    .article-box {
+        margin-left: 2%;
     }
 }
