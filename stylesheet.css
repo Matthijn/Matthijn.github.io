@@ -1,46 +1,41 @@
-/* scrollbar */
+
 html {
-    --scrollbarBG: #202020;
-    --thumbBG: #ff624d;
+    --backgroundColor: #202020;
+    --primaryColor: #ff624d;
+    --textColor: #5c6370;
+    --darkColor: black
 }
+
+/* scrollbar */
 body::-webkit-scrollbar {
     width: 11px;
 }
 body {
     scrollbar-width: thin;
-    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    scrollbar-color: var(--primaryColor) var(--backgroundColor);
     overflow-x: hidden;
 }
 body::-webkit-scrollbar-track {
-    background: var(--scrollbarBG);
+    background: var(--backgroundColor);
 }
 body::-webkit-scrollbar-thumb {
-    background-color: var(--thumbBG) ;
+    background-color: var(--primaryColor) ;
     border-radius: 6px;
-    border: 3px solid var(--scrollbarBG);
+    border: 3px solid var(--backgroundColor);
 }
 /* /scrollbar */
 
 body {
     font-family: Inter, sans-serif;
     overflow-x: hidden;
-    background: #202020;
-}
-
-body a {
-    color: #ccc;
-    text-decoration: none;
+    background: var(--backgroundColor);
 }
 
 body a:hover {
-    color: #ff624d;
     text-decoration: none;
 }
 
-.front, .back {
-    list-style: none;
-}
-
+/* front page */
 .physics-container {
     padding: 0;
     position: absolute;
@@ -57,89 +52,6 @@ body a:hover {
     bottom: 0;
     right: 0;
     z-index: 2;
-}
-
-#content {
-    position: absolute;
-    left: 0;
-    right: -10px;
-    top: 100%;
-    color: #929292;
-    z-index: 2;
-    overflow: auto;
-    overflow-x: hidden;
-}
-
-.with-background {
-    background: #202020;
-    box-shadow: 5px 5px 10px #202020;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    overflow: auto;
-    overflow-x: hidden;
-}
-
-.padding-box {
-    height: 290px;
-    pointer-events: none;
-}
-
-#content h1, #content h2 {
-    color: #ff624d
-}
-
-article ul {
-    margin: 0 !important;
-}
-
-.section {
-    padding: 2em;
-    overflow: auto;
-    clear: both;
-}
-
-.articles {
-    display: block;
-    padding: 3em 0 3em 3em;
-    margin: 0 auto;
-    overflow: auto;
-    width: 1280px;
-    list-style: none;
-    overflow-x: hidden;
-}
-
-.article-box {
-    box-sizing: border-box;
-    width: 360px;
-    height: 600px;
-    margin-right: 50px;
-    float: left;
-    display: block;
-    margin-bottom: 50px;
-}
-
-.box-right {
-    float: right;
-    width: 60%;
-}
-
-.peerwell-images {
-    list-style: none;
-}
-
-.peerwell-app img, .peerwell-app {
-    width: 200px;
-    display: inline-block;
-    float: left;
-    margin-top: 10px;
-}
-
-.peerwell-dashboard img, .peerwell-dashboard {
-    width: 500px;
-    display: inline-block;
-    float: left;
-    margin-top: 20px;
 }
 
 .me .content {
@@ -175,8 +87,10 @@ article ul {
     background: white;
     border-radius: 10px;
     padding: 10px;
-    color: black;
+    color: var(--darkColor);
     text-decoration: none;
+    display: inline-block;
+    margin-left: 6px;
 }
 
 .me .profiles {
@@ -203,100 +117,9 @@ article ul {
     width: 30px;
 }
 
-.me .more {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    opacity: .8;
-}
-
-.me .more .arrow {
-    width: 75px;
-    opacity: .4;
-}
-
 .me .tldr a:hover {
-    background: black;
+    background: var(--darkColor);
     color: white;
-}
-
-.skills-bottom {
-    border-top: 1px solid rgba(120,120,120,0.2) ;
-    position: absolute;
-    bottom: -1em;
-    padding-bottom: 1.5em;
-    left: 20%;
-    right: 20%;
-    height: 100px;
-    text-align: center;
-}
-
-.skills li {
-    width: 75px;
-    height: 75px;
-    list-style: none;
-    display: inline-block;
-    padding: 1em;
-}
-
-.skills li a {
-    width: 75px;
-    height: 75px;
-    display: grid;
-    place-content: center;
-    float: left;
-    border-radius: 5px;
-    padding: 0.5em;
-}
-
-.skills li a:hover {
-    background-color: rgba(255,255,255,0.9);
-}
-
-.skills li img {
-    width: 100%;
-}
-
-.logo {
-    width: 200px;
-    margin: 0 auto;
-}
-
-.mini-logo {
-    padding: 0 !important;
-    width: 200px !important;
-    display: block;
-    margin: 0 auto;
-}
-
-.managedwp-logo {
-    width: 70px !important;
-    padding: 0 !important;
-    display: block;
-    margin: 0 auto;
-}
-
-.mgtickets-logo {
-    margin-top: 7px;
-    margin-bottom: 8px;
-}
-
-.code {
-    background: #363636;
-    display: block;
-    color: white;
-    text-decoration: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 230px;
-    z-index: 1;
-    opacity: .5;
-}
-
-.code:hover {
-    background: #ff624d
 }
 
 /* animation initial text */
@@ -334,12 +157,85 @@ article ul {
 }
 /* /animation */
 
-.flickity-prev-next-button.next {
-    right: -25px;
+/* /front page */
+
+/* portfolio */
+#content {
+    position: absolute;
+    left: 0;
+    right: -10px;
+    top: 100%;
+    z-index: 2;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
-.flickity-prev-next-button.previous {
-    left: -25px;
+#content h1, #content h2 {
+    color: var(--primaryColor)
+}
+
+.with-background {
+    background: var(--backgroundColor);
+    box-shadow: 5px 5px 10px var(--backgroundColor);
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: auto;
+    overflow-x: hidden;
+}
+/* /portfolio */
+
+/* portfolio cards */
+.front, .back {
+    list-style: none;
+}
+
+article ul {
+    margin: 0 !important;
+}
+
+.articles {
+    display: block;
+    padding: 3em 0 3em 3em;
+    margin: 0 auto;
+    overflow: auto;
+    width: 1280px;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.article-box {
+    box-sizing: border-box;
+    width: 360px;
+    height: 600px;
+    margin-right: 50px;
+    float: left;
+    display: block;
+    margin-bottom: 50px;
+}
+
+.logo {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.mini-logo {
+    padding: 0 !important;
+    width: 200px !important;
+    display: block;
+    margin: 0 auto;
+}
+
+.managedwp-logo {
+    width: 70px !important;
+    padding: 0 !important;
+    display: block;
+    margin: 0 auto;
+}
+
+.mgtickets-logo {
+    margin-top: 7px;
+    margin-bottom: 8px;
 }
 
 .scene {
@@ -384,7 +280,7 @@ article ul {
     /*background: white;*/
     background: rgb(237,237,237);
     background: linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 100%);
-    color: #5c6370;
+    color: var(--textColor);
     border-radius: 20px;
 }
 
@@ -403,14 +299,6 @@ article ul {
     bottom: 0;
     right: 0;
     display: block;
-}
-
-.cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
 }
 
 .card .peerwell-back {
@@ -433,6 +321,7 @@ article ul {
     background-image: url("/assets/mgtickets-app.png");
 }
 
+/* portfolio tech */
 .tech {
     position: absolute;
     bottom: 0;
@@ -446,7 +335,7 @@ article ul {
     border-top: 1px solid #a3a3a3;
     list-style: none;
     overflow: auto;
-    padding: 15px 5px 15px 15px;
+    padding: 15px 5px 15px 15px !important;
     text-align: center;
 }
 
@@ -461,7 +350,39 @@ article ul {
     display: inline-block;
     margin: 10px 10px 0;
 }
+/* /portfolio tech */
 
+/* portfolio cards */
+
+/* sourcecode view */
+.padding-box {
+    height: 290px;
+    pointer-events: none;
+}
+
+.code {
+    background: #363636;
+    display: block;
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 230px;
+    z-index: 1;
+    opacity: .5;
+    padding: 2em;
+    overflow: auto;
+    clear: both;
+}
+
+.code:hover {
+    background: var(--primaryColor)
+}
+/* /sourcecode view */
+
+/* responsive design */
 @media only screen and (max-width: 1250px) {
     .articles {
         width: 900px;
@@ -488,9 +409,8 @@ article ul {
 
 
     .with-background {
-        margin: 0;
         padding: 0;
-        margin-top: 40px;
+        margin: 40px 0 0;
     }
 
     .articles {
@@ -534,3 +454,4 @@ article ul {
         margin-left: 2%;
     }
 }
+/* /responsive design */
